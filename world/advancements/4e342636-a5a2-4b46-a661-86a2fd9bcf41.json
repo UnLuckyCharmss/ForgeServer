@@ -47,6 +47,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/writable_book": {
+    "criteria": {
+      "has_book": "2019-04-21 19:08:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/oak_wooden_slab": {
     "criteria": {
       "has_planks": "2019-04-20 16:56:34 +0100"
@@ -62,6 +68,12 @@
   "minecraft:recipes/building_blocks/lime_concrete_powder": {
     "criteria": {
       "has_gravel": "2019-04-20 17:53:59 +0100"
+    },
+    "done": true
+  },
+  "enderioconduits:energy/2_energy_conduit_enhanced": {
+    "criteria": {
+      "inv_changed-enderio:power_conduit_enhanced": "2019-04-21 22:40:57 +0100"
     },
     "done": true
   },
@@ -140,6 +152,12 @@
   "minecraft:recipes/redstone/trapdoor": {
     "criteria": {
       "has_planks": "2019-04-20 16:56:34 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/melon_seeds": {
+    "criteria": {
+      "has_melon": "2019-04-21 19:04:45 +0100"
     },
     "done": true
   },
@@ -382,9 +400,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/speckled_melon": {
+    "criteria": {
+      "has_melon": "2019-04-21 19:04:45 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/iron_ingot_from_block": {
     "criteria": {
       "has_the_recipe": "2019-04-20 18:35:01 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/fast_travel": {
+    "criteria": {
+      "travelled": "2019-04-21 16:41:00 +0100"
     },
     "done": true
   },
@@ -540,6 +570,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/red_dye_from_rose_bush": {
+    "criteria": {
+      "has_double_plant": "2019-04-21 21:57:40 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/blue_wool": {
     "criteria": {
       "has_white_wool": "2019-04-20 17:01:09 +0100"
@@ -692,6 +728,7 @@
   },
   "enderioconduits:goals/all_conduits": {
     "criteria": {
+      "inv_changed-enderio:power_conduit_enhanced2": "2019-04-21 22:40:57 +0100",
       "inv_changed-enderio:liquid_conduit2": "2019-04-21 11:33:09 +0100",
       "inv_changed-enderio:power_conduit2": "2019-04-21 11:49:07 +0100"
     },
@@ -718,6 +755,12 @@
   "minecraft:recipes/decorations/enchanting_table": {
     "criteria": {
       "has_obsidian": "2019-04-20 18:21:42 +0100"
+    },
+    "done": true
+  },
+  "enderiomachines:basics/sagmill/7_black": {
+    "criteria": {
+      "inv_changed-enderio:item_material": "2019-04-21 21:15:31 +0100"
     },
     "done": true
   },
@@ -754,6 +797,12 @@
   "minecraft:adventure/root": {
     "criteria": {
       "killed_something": "2019-04-20 16:58:12 +0100"
+    },
+    "done": true
+  },
+  "enderio:gears/g1_wooden_gear": {
+    "criteria": {
+      "inv_changed-enderio:item_material": "2019-04-21 19:07:45 +0100"
     },
     "done": true
   },
@@ -828,6 +877,7 @@
       "zombie_villager": "2019-04-20 17:46:33 +0100",
       "skeleton": "2019-04-20 17:49:58 +0100",
       "zombie": "2019-04-20 17:49:56 +0100",
+      "witch": "2019-04-21 20:48:47 +0100",
       "spider": "2019-04-20 18:05:08 +0100",
       "creeper": "2019-04-20 18:09:37 +0100",
       "enderman": "2019-04-20 20:24:59 +0100"
@@ -858,9 +908,21 @@
     },
     "done": true
   },
+  "enderiomachines:basics/alloy/2_energetic_alloy_get": {
+    "criteria": {
+      "inv_changed-enderio:item_energetic_alloy": "2019-04-21 17:20:08 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/redstone_block": {
     "criteria": {
       "has_at_least_9_redstone": "2019-04-20 17:45:35 +0100"
+    },
+    "done": true
+  },
+  "advancedrocketry:normal/root": {
+    "criteria": {
+      "crafting_table": "2019-04-21 18:53:58 +0100"
     },
     "done": true
   },
@@ -951,6 +1013,12 @@
   "minecraft:recipes/combat/diamond_helmet": {
     "criteria": {
       "has_diamond": "2019-04-20 18:17:20 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/anvil": {
+    "criteria": {
+      "has_the_recipe": "2019-04-21 18:15:11 +0100"
     },
     "done": true
   },
@@ -1250,6 +1318,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/bookshelf": {
+    "criteria": {
+      "has_book": "2019-04-21 19:08:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/fence": {
     "criteria": {
       "has_planks": "2019-04-20 16:56:34 +0100"
@@ -1442,9 +1516,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/repeater": {
+    "criteria": {
+      "has_redstone_torch": "2019-04-21 17:25:39 +0100"
+    },
+    "done": true
+  },
   "minecraft:adventure/kill_a_mob": {
     "criteria": {
       "zombie_villager": "2019-04-20 17:46:33 +0100"
+    },
+    "done": true
+  },
+  "enderiomachines:basics/sagmill/4_brown": {
+    "criteria": {
+      "inv_changed-enderio:item_material": "2019-04-21 21:13:26 +0100"
     },
     "done": true
   },
@@ -1483,14 +1569,20 @@
       "forest": "2019-04-20 16:46:06 +0100",
       "swampland": "2019-04-20 17:06:23 +0100",
       "birch_forest": "2019-04-20 20:27:43 +0100",
+      "deep_ocean": "2019-04-21 18:54:22 +0100",
       "beaches": "2019-04-20 20:44:50 +0100",
       "extreme_hills_with_trees": "2019-04-20 20:34:42 +0100",
       "forest_hills": "2019-04-20 16:46:33 +0100",
       "plains": "2019-04-20 16:56:09 +0100",
+      "jungle_edge": "2019-04-21 19:04:43 +0100",
+      "taiga": "2019-04-21 19:05:13 +0100",
       "birch_forest_hills": "2019-04-20 20:27:53 +0100",
+      "ocean": "2019-04-21 18:54:11 +0100",
       "extreme_hills": "2019-04-20 20:34:51 +0100",
       "roofed_forest": "2019-04-20 17:31:56 +0100",
-      "river": "2019-04-20 16:59:53 +0100"
+      "river": "2019-04-20 16:59:53 +0100",
+      "jungle": "2019-04-21 19:04:47 +0100",
+      "stone_beach": "2019-04-21 19:12:03 +0100"
     },
     "done": false
   },
@@ -1515,6 +1607,24 @@
   "minecraft:recipes/building_blocks/birch_wooden_slab": {
     "criteria": {
       "has_planks": "2019-04-20 20:40:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/book": {
+    "criteria": {
+      "has_the_recipe": "2019-04-21 21:45:13 +0100"
+    },
+    "done": true
+  },
+  "of:main/coffee_powder": {
+    "criteria": {
+      "hold_manual": "2019-04-21 21:12:10 +0100"
+    },
+    "done": true
+  },
+  "enderiomachines:basics/sagmill/3_sagmill_bushes": {
+    "criteria": {
+      "inv_changed-enderio:item_material": "2019-04-21 21:12:02 +0100"
     },
     "done": true
   },
@@ -1605,6 +1715,12 @@
   "minecraft:recipes/transportation/jungle_boat": {
     "criteria": {
       "entered_water": "2019-04-20 16:59:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2019-04-21 21:52:43 +0100"
     },
     "done": true
   },
@@ -1707,6 +1823,12 @@
   "enderio:root": {
     "criteria": {
       "location": "2019-04-20 18:50:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/melon_block": {
+    "criteria": {
+      "has_melon": "2019-04-21 19:04:45 +0100"
     },
     "done": true
   },
