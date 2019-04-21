@@ -272,6 +272,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/detector_rail": {
+    "criteria": {
+      "has_rail": "2019-04-21 12:17:49 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/gold_nugget": {
     "criteria": {
       "has_gold_ingot": "2019-04-20 18:08:00 +0100"
@@ -570,6 +576,12 @@
     },
     "done": true
   },
+  "minecraft:story/lava_bucket": {
+    "criteria": {
+      "lava_bucket": "2019-04-21 12:07:17 +0100"
+    },
+    "done": true
+  },
   "minecraft:husbandry/root": {
     "criteria": {
       "consumed_item": "2019-04-20 17:13:16 +0100"
@@ -587,6 +599,12 @@
       "entered_water": "2019-04-20 17:00:27 +0100"
     },
     "done": true
+  },
+  "enderioconduits:goals/all_conduits": {
+    "criteria": {
+      "inv_changed-enderio:power_conduit2": "2019-04-21 12:11:58 +0100"
+    },
+    "done": false
   },
   "minecraft:recipes/food/golden_apple": {
     "criteria": {
@@ -714,13 +732,27 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/activator_rail": {
+    "criteria": {
+      "has_rail": "2019-04-21 12:17:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/spectral_arrow": {
+    "criteria": {
+      "has_glowstone_dust": "2019-04-21 12:07:17 +0100"
+    },
+    "done": true
+  },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "zombie_villager": "2019-04-21 12:21:56 +0100",
       "skeleton": "2019-04-20 17:24:00 +0100",
       "zombie": "2019-04-20 18:02:37 +0100",
       "spider": "2019-04-20 18:31:31 +0100",
       "ghast": "2019-04-20 20:48:05 +0100",
-      "creeper": "2019-04-20 19:04:03 +0100"
+      "creeper": "2019-04-20 19:04:03 +0100",
+      "enderman": "2019-04-21 12:20:22 +0100"
     },
     "done": false
   },
@@ -754,6 +786,12 @@
     },
     "done": true
   },
+  "enderiomachines:basics/alloy/2_energetic_alloy_get": {
+    "criteria": {
+      "inv_changed-enderio:item_energetic_alloy": "2019-04-21 12:12:26 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/redstone_block": {
     "criteria": {
       "has_at_least_9_redstone": "2019-04-20 18:55:03 +0100"
@@ -775,6 +813,12 @@
   "minecraft:recipes/redstone/dark_oak_fence_gate": {
     "criteria": {
       "has_planks": "2019-04-20 18:30:08 +0100"
+    },
+    "done": true
+  },
+  "enderiomachines:basics/sagmill/6_coal": {
+    "criteria": {
+      "inv_changed-enderio:item_material": "2019-04-21 12:10:13 +0100"
     },
     "done": true
   },
@@ -946,6 +990,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/stone_slab": {
+    "criteria": {
+      "has_stone": "2019-04-21 12:52:08 +0100"
+    },
+    "done": true
+  },
+  "enderio:start/1_infinity_powder_get": {
+    "criteria": {
+      "inv_changed-enderio:item_material": "2019-04-21 12:12:34 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/coal_block": {
     "criteria": {
       "has_at_least_9_coal": "2019-04-20 17:05:47 +0100"
@@ -1000,6 +1056,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/golden_rail": {
+    "criteria": {
+      "has_rail": "2019-04-21 12:17:49 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/bookshelf": {
     "criteria": {
       "has_book": "2019-04-20 20:35:27 +0100"
@@ -1027,6 +1089,12 @@
   "minecraft:recipes/building_blocks/andesite": {
     "criteria": {
       "has_stone": "2019-04-20 18:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/glowstone": {
+    "criteria": {
+      "has_glowstone_dust": "2019-04-21 12:07:17 +0100"
     },
     "done": true
   },
@@ -1078,6 +1146,12 @@
     },
     "done": true
   },
+  "enderioconduits:energy/1_energy_conduit": {
+    "criteria": {
+      "inv_changed-enderio:power_conduit": "2019-04-21 12:11:58 +0100"
+    },
+    "done": true
+  },
   "minecraft:story/root": {
     "criteria": {
       "crafting_table": "2019-04-20 16:58:49 +0100"
@@ -1087,6 +1161,12 @@
   "nethergold:dust_nether_gold_pickup": {
     "criteria": {
       "pickupNetherGoldDust": "2019-04-20 20:41:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/stone_button": {
+    "criteria": {
+      "has_stone": "2019-04-21 12:52:08 +0100"
     },
     "done": true
   },
@@ -1168,6 +1248,12 @@
     },
     "done": true
   },
+  "enderioconduits:start/2_conduit_binder": {
+    "criteria": {
+      "inv_changed-enderio:conduit_binder": "2019-04-21 12:07:17 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/polished_andesite": {
     "criteria": {
       "has_stone": "2019-04-20 17:57:04 +0100"
@@ -1241,6 +1327,12 @@
   "minecraft:husbandry/plant_seed": {
     "criteria": {
       "wheat": "2019-04-20 20:38:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/stone_pressure_plate": {
+    "criteria": {
+      "has_stone": "2019-04-21 12:52:08 +0100"
     },
     "done": true
   },
@@ -1331,6 +1423,12 @@
   "minecraft:recipes/building_blocks/polished_granite": {
     "criteria": {
       "has_stone": "2019-04-20 17:58:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stonebrick": {
+    "criteria": {
+      "has_stone": "2019-04-21 12:52:08 +0100"
     },
     "done": true
   },
