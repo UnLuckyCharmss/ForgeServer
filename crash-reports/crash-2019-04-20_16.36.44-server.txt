@@ -1,0 +1,90 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 20/04/19 16:36
+Description: Exception in server tick loop
+
+Missing Mods:
+	unknown : need [1.12.2-0.5.48,): have missing
+
+Missing Mods:
+	unknown : need [1.12.2-0.5.48,): have missing
+
+Missing Mods:
+	unknown : need [1.12.2-0.5.48,): have missing
+
+Missing Mods:
+	unknown : need [1.12.2-0.5.48,): have missing
+
+Missing Mods:
+	unknown : need [1.12.2-0.5.48,): have missing
+
+Missing Mods:
+	unknown : need [1.12.2-0.5.48,): have missing
+
+net.minecraftforge.fml.common.MultipleModsErrored
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:298)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:570)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:98)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:333)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 4404498768 bytes (4200 MB) / 6029312000 bytes (5750 MB) up to 6029312000 bytes (5750 MB)
+	JVM Flags: 2 total; -Xmx6000M -Xms6000M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2836 34 mods loaded, 34 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                                | Version           | Source                                                       | Signature                                |
+	|:----- |:--------------------------------- |:----------------- |:------------------------------------------------------------ |:---------------------------------------- |
+	| L     | minecraft                         | 1.12.2            | minecraft.jar                                                | None                                     |
+	| L     | mcp                               | 9.42              | minecraft.jar                                                | None                                     |
+	| L     | FML                               | 8.0.99.99         | forge-1.12.2-14.23.5.2836-universal.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| L     | forge                             | 14.23.5.2836      | forge-1.12.2-14.23.5.2836-universal.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| L     | additionalstructures              | 1.6.0             | Additional+Structures+1.12.2+by+XxRexRaptorxX++(v.1.6.0).jar | None                                     |
+	| L     | animalnet                         | 1.7               | animalnet-1.7.jar                                            | None                                     |
+	| L     | aqueducts                         | 0.3               | Aqueducts-0.3.jar                                            | None                                     |
+	| L     | auginter                          | 1.1.0             | auginter-1.1.0-1.12.x.jar                                    | None                                     |
+	| L     | better_diving                     | 1.0.6             | BetterDiving-1.12.2-1.0.6.jar                                | None                                     |
+	| L     | bonsaitrees                       | 1.1.1             | bonsaitrees-1.1.1-b138.jar                                   | None                                     |
+	| L     | candymod                          | 0.4.2             | candyworld-0.4.2.jar                                         | None                                     |
+	| L     | carbonado                         | 1.4.2             | carbonado-1.4.2-mc1.12.x.jar                                 | None                                     |
+	| L     | desertland                        | 0.2.4             | desertland-1.12.2-0.2.4.jar                                  | None                                     |
+	| L     | enderio                           | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderiobase                       | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderioconduits                   | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderioconduitsappliedenergistics | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderioconduitsopencomputers      | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderioconduitsrefinedstorage     | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderiointegrationforestry        | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderiointegrationtic             | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderiointegrationticlate         | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderiomachines                   | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | enderiopowertools                 | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	| L     | ironchest                         | 1.12.2-7.0.40.824 | ironchest-1.12.2-7.0.40.824.jar                              | None                                     |
+	| L     | jz                                | 1.2               | Jazzium-1.12.2-v1.2.jar                                      | None                                     |
+	| L     | jei                               | 4.15.0.268        | jei_1.12.2-4.15.0.268.jar                                    | None                                     |
+	| L     | journeymap                        | 1.12.2-5.5.4      | journeymap-1.12.2-5.5.4.jar                                  | None                                     |
+	| L     | movinglightsource                 | 1.0.15            | movinglightsource-1.12.2-1.0.15.jar                          | None                                     |
+	| L     | nethergold                        | r2                | Nether+Gold-1.12.2-r2.jar                                    | None                                     |
+	| L     | signpost                          | 1.06.1            | signpost-1.12-1.06.1.jar                                     | None                                     |
+	| L     | tinymobfarm                       | 1.0.5             | TinyMobFarm-1.12.2-1.0.5.jar                                 | None                                     |
+	| L     | tumbleweed                        | 1.11-0.4.4        | tumbleweed-1.11-0.4.4.jar                                    | None                                     |
+	| L     | of                                | 0.13              | Useful+Interior+-+0.13+[1.12.2].jar                          | None                                     |
+
+	Loaded coremods (and transformers): 
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

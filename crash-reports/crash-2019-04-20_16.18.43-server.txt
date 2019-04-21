@@ -1,0 +1,101 @@
+---- Minecraft Crash Report ----
+// I blame Dinnerbone.
+
+Time: 20/04/19 16:18
+Description: Exception in server tick loop
+
+Duplicate Mods:
+	enderio : D:\ForgeServer\.\mods\EnderIO-1.12.2-5.0.43.jar
+	enderio : D:\ForgeServer\.\mods\EnderIO-base-1.12.2-5.0.43.jar
+	enderiobase : D:\ForgeServer\.\mods\EnderIO-1.12.2-5.0.43.jar
+	enderiobase : D:\ForgeServer\.\mods\EnderIO-base-1.12.2-5.0.43.jar
+	enderioconduits : D:\ForgeServer\.\mods\EnderIO-1.12.2-5.0.43.jar
+	enderioconduits : D:\ForgeServer\.\mods\EnderIO-conduits-1.12.2-5.0.43.jar
+	enderiopowertools : D:\ForgeServer\.\mods\EnderIO-1.12.2-5.0.43.jar
+	enderiopowertools : D:\ForgeServer\.\mods\EnderIO-conduits-1.12.2-5.0.43.jar
+
+net.minecraftforge.fml.common.DuplicateModsFoundException
+	at net.minecraftforge.fml.common.Loader.identifyDuplicates(Loader.java:464)
+	at net.minecraftforge.fml.common.Loader.identifyMods(Loader.java:426)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:566)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:98)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:333)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 5697074512 bytes (5433 MB) / 6029312000 bytes (5750 MB) up to 6029312000 bytes (5750 MB)
+	JVM Flags: 2 total; -Xmx6000M -Xms6000M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2836 52 mods loaded, 0 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                                | Version           | Source                                                       | Signature                                |
+	|:----- |:--------------------------------- |:----------------- |:------------------------------------------------------------ |:---------------------------------------- |
+	|       | minecraft                         | 1.12.2            | minecraft.jar                                                | None                                     |
+	|       | mcp                               | 9.42              | minecraft.jar                                                | None                                     |
+	|       | FML                               | 8.0.99.99         | forge-1.12.2-14.23.5.2836-universal.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	|       | forge                             | 14.23.5.2836      | forge-1.12.2-14.23.5.2836-universal.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	|       | additionalstructures              | 1.6.0             | Additional+Structures+1.12.2+by+XxRexRaptorxX++(v.1.6.0).jar | None                                     |
+	|       | animalnet                         | 1.7               | animalnet-1.7.jar                                            | None                                     |
+	|       | aqueducts                         | 0.3               | Aqueducts-0.3.jar                                            | None                                     |
+	|       | auginter                          | 1.1.0             | auginter-1.1.0-1.12.x.jar                                    | None                                     |
+	|       | better_diving                     | 1.0.6             | BetterDiving-1.12.2-1.0.6.jar                                | None                                     |
+	|       | bonsaitrees                       | 1.1.1             | bonsaitrees-1.1.1-b138.jar                                   | None                                     |
+	|       | bountiful                         | 1.1               | Bountiful-1.1.jar                                            | None                                     |
+	|       | candymod                          | 0.4.2             | candyworld-0.4.2.jar                                         | None                                     |
+	|       | carbonado                         | 1.4.2             | carbonado-1.4.2-mc1.12.x.jar                                 | None                                     |
+	|       | craftingtweaks                    | 8.1.9             | CraftingTweaks_1.12.2-8.1.9.jar                              | None                                     |
+	|       | desertland                        | 0.2.4             | desertland-1.12.2-0.2.4.jar                                  | None                                     |
+	|       | dungeons2                         | 1.3.2             | Dungeons2-mc1.12.2-f14.23.1.2555-v1.3.2.jar                  | None                                     |
+	|       | enderio                           | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderiobase                       | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderioconduits                   | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderioconduitsappliedenergistics | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderioconduitsopencomputers      | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderioconduitsrefinedstorage     | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderiointegrationforestry        | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderiointegrationtic             | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderiointegrationticlate         | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderiomachines                   | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderiopowertools                 | 5.0.43            | EnderIO-1.12.2-5.0.43.jar                                    | None                                     |
+	|       | enderio                           | 5.0.43            | EnderIO-base-1.12.2-5.0.43.jar                               | None                                     |
+	|       | enderiobase                       | 5.0.43            | EnderIO-base-1.12.2-5.0.43.jar                               | None                                     |
+	|       | enderioconduits                   | 5.0.43            | EnderIO-conduits-1.12.2-5.0.43.jar                           | None                                     |
+	|       | enderiopowertools                 | 5.0.43            | EnderIO-conduits-1.12.2-5.0.43.jar                           | None                                     |
+	|       | gyth                              | 2.1.35            | Gyth-1.12.2-2.1.35.jar                                       | None                                     |
+	|       | ironchest                         | 1.12.2-7.0.40.824 | ironchest-1.12.2-7.0.40.824.jar                              | None                                     |
+	|       | jz                                | 1.2               | Jazzium-1.12.2-v1.2.jar                                      | None                                     |
+	|       | jei                               | 4.15.0.268        | jei_1.12.2-4.15.0.268.jar                                    | None                                     |
+	|       | journeymap                        | 1.12.2-5.5.4      | journeymap-1.12.2-5.5.4.jar                                  | None                                     |
+	|       | magicalmap                        | 3.2.0             | Magical+Map-1.12.2-3.2.0.jar                                 | None                                     |
+	|       | minecolonies                      | 1.12.2-0.8.7582   | minecolonies-universal-1.12.2-0.8.7582.jar                   | None                                     |
+	|       | moarboats                         | 1.2.1             | moarboats-1.12.2-1.2.1.jar                                   | None                                     |
+	|       | movinglightsource                 | 1.0.15            | movinglightsource-1.12.2-1.0.15.jar                          | None                                     |
+	|       | nethergold                        | r2                | Nether+Gold-1.12.2-r2.jar                                    | None                                     |
+	|       | oppositedimensions                | 3.0.0             | Opposite+Dimensions+3.0.0.jar                                | None                                     |
+	|       | pc                                | 1.0.0             | PizzaCraft-1.12.2-0.5.7.jar                                  | None                                     |
+	|       | signpost                          | 1.06.1            | signpost-1.12-1.06.1.jar                                     | None                                     |
+	|       | streams                           | 0.4.3             | Streams-1.12-0.4.3.jar                                       | None                                     |
+	|       | tconstruct                        | 1.12.2-2.12.0.135 | TConstruct-1.12.2-2.12.0.135.jar                             | None                                     |
+	|       | teastory                          | 3.2.2.909         | TeaStory-3.2.2.909-1.12.2.jar                                | None                                     |
+	|       | tinymobfarm                       | 1.0.5             | TinyMobFarm-1.12.2-1.0.5.jar                                 | None                                     |
+	|       | treasure2                         | 1.0.1             | Treasure2-mc1.12.2-f14.23.4.2705-v1.0.1.jar                  | None                                     |
+	|       | tumbleweed                        | 1.11-0.4.4        | tumbleweed-1.11-0.4.4.jar                                    | None                                     |
+	|       | undergroundbiomes                 | 1.3.2             | UndergroundBiomesConstructs-1.12-1.3.2.jar                   | None                                     |
+	|       | of                                | 0.13              | Useful+Interior+-+0.13+[1.12.2].jar                          | None                                     |
+
+	Loaded coremods (and transformers): 
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
