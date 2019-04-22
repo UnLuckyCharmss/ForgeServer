@@ -1,0 +1,89 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  EnderCorePlugin (EnderCore-1.12.2-0.5.57-core.jar)
+  AdvancedRocketryPlugin (AdvancedRocketry-1.12.2-1.5.0-139-universal.jar)
+Contact their authors BEFORE contacting forge
+
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 22/04/19 15:49
+Description: Exception in server tick loop
+
+java.lang.NullPointerException: Exception in server tick loop
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:784)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 2856173768 bytes (2723 MB) / 6203899904 bytes (5916 MB) up to 6203899904 bytes (5916 MB)
+	JVM Flags: 2 total; -Xmx6000M -Xms6000M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 37
+	FML: MCP 9.42 Powered by Forge 14.23.5.2836 34 mods loaded, 34 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                   | Version           | Source                                                       | Signature                                |
+	|:------ |:-------------------- |:----------------- |:------------------------------------------------------------ |:---------------------------------------- |
+	| LCHIJA | minecraft            | 1.12.2            | minecraft.jar                                                | None                                     |
+	| LCHIJA | mcp                  | 9.42              | minecraft.jar                                                | None                                     |
+	| LCHIJA | FML                  | 8.0.99.99         | forge-1.12.2-14.23.5.2836-universal.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | forge                | 14.23.5.2836      | forge-1.12.2-14.23.5.2836-universal.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | advancedrocketrycore | 1                 | minecraft.jar                                                | None                                     |
+	| LCHIJA | actuallyadditions    | 1.12.2-r146       | ActuallyAdditions-1.12.2-r146.jar                            | None                                     |
+	| LCHIJA | additionalstructures | 1.6.0             | Additional+Structures+1.12.2+by+XxRexRaptorxX++(v.1.6.0).jar | None                                     |
+	| LCHIJA | libvulpes            | 0.4.0.-54         | LibVulpes-1.12.2-0.4.0-54-universal.jar                      | None                                     |
+	| LCHIJA | advancedrocketry     | 1.5.0.-139        | AdvancedRocketry-1.12.2-1.5.0-139-universal.jar              | None                                     |
+	| LCHIJA | animalnet            | 1.7               | animalnet-1.7.jar                                            | None                                     |
+	| LCHIJA | aqueducts            | 0.3               | Aqueducts-0.3.jar                                            | None                                     |
+	| LCHIJA | better_diving        | 1.0.6             | BetterDiving-1.12.2-1.0.6.jar                                | None                                     |
+	| LCHIJA | bonsaitrees          | 1.1.1             | bonsaitrees-1.1.1-b138.jar                                   | None                                     |
+	| LCHIJA | candymod             | 0.4.2             | candyworld-0.4.2.jar                                         | None                                     |
+	| LCHIJA | carbonado            | 1.4.2             | carbonado-1.4.2-mc1.12.x.jar                                 | None                                     |
+	| LCHIJA | desertland           | 0.2.4             | desertland-1.12.2-0.2.4.jar                                  | None                                     |
+	| LCHIJA | endercore            | 1.12.2-0.5.57     | EnderCore-1.12.2-0.5.57.jar                                  | None                                     |
+	| LCHIJA | jei                  | 4.15.0.268        | jei_1.12.2-4.15.0.268.jar                                    | None                                     |
+	| LCHIJA | enderio              | 5.0.43            | EnderIO-base-1.12.2-5.0.43 (1).jar                           | None                                     |
+	| LCHIJA | enderiobase          | 5.0.43            | EnderIO-base-1.12.2-5.0.43 (1).jar                           | None                                     |
+	| LCHIJA | enderioconduits      | 5.0.43            | EnderIO-conduits-1.12.2-5.0.43 (1).jar                       | None                                     |
+	| LCHIJA | enderiopowertools    | 5.0.43            | EnderIO-conduits-1.12.2-5.0.43 (1).jar                       | None                                     |
+	| LCHIJA | enderiomachines      | 5.0.43            | EnderIO-machines-1.12.2-5.0.43 (1).jar                       | None                                     |
+	| LCHIJA | extrautils2          | 1.0               | extrautils2-1.12-1.9.9.jar                                   | None                                     |
+	| LCHIJA | ironchest            | 1.12.2-7.0.40.824 | ironchest-1.12.2-7.0.40.824.jar                              | None                                     |
+	| LCHIJA | jz                   | 1.2               | Jazzium-1.12.2-v1.2.jar                                      | None                                     |
+	| LCHIJA | journeymap           | 1.12.2-5.5.4      | journeymap-1.12.2-5.5.4.jar                                  | None                                     |
+	| LCHIJA | nethergold           | r2                | Nether+Gold-1.12.2-r2.jar                                    | None                                     |
+	| LCHIJA | netherportalfix      | 5.3.17            | NetherPortalFix_1.12.1-5.3.17.jar                            | None                                     |
+	| LCHIJA | signpost             | 1.06.1            | signpost-1.12-1.06.1.jar                                     | None                                     |
+	| LCHIJA | tinymobfarm          | 1.0.5             | TinyMobFarm-1.12.2-1.0.5.jar                                 | None                                     |
+	| LCHIJA | tumbleweed           | 1.11-0.4.4        | tumbleweed-1.11-0.4.4.jar                                    | None                                     |
+	| LCHIJA | twilightforest       | 3.9.888           | twilightforest-1.12.2-3.9.888-universal.jar                  | None                                     |
+	| LCHIJA | of                   | 0.13              | Useful+Interior+-+0.13+[1.12.2].jar                          | None                                     |
+
+	Loaded coremods (and transformers): 
+EnderCorePlugin (EnderCore-1.12.2-0.5.57-core.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+  com.enderio.core.common.transform.SimpleMixinPatcher
+AdvancedRocketryPlugin (AdvancedRocketry-1.12.2-1.5.0-139-universal.jar)
+  zmaster587.advancedRocketry.asm.ClassTransformer
+	Ender IO: No known problems detected.
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!You are looking at the diagnostics information, not at the crash.       !!!
+	!!!Scroll up until you see the line with '---- Minecraft Crash Report ----'!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [EntityPlayerMP['UnLuckyCharmss'/532818, l='world', x=1553.75, y=34.00, z=-2012.08]]
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

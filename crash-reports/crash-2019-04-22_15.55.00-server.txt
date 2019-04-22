@@ -1,0 +1,304 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  EnderCorePlugin (EnderCore-1.12.2-0.5.57-core.jar)
+  AdvancedRocketryPlugin (AdvancedRocketry-1.12.2-1.5.0-139-universal.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't be sad, have a hug! <3
+
+Time: 22/04/19 15:55
+Description: Watching Server
+
+java.lang.Error: ServerHangWatchdog detected that a single server tick took 60.00 seconds (should be max 0.05)
+	at net.minecraft.world.World.func_175642_b(World.java:843)
+	at net.minecraft.world.World.func_175638_a(World.java:2823)
+	at net.minecraft.world.World.func_180500_c(World.java:2860)
+	at net.minecraft.world.World.func_175664_x(World.java:2777)
+	at net.minecraft.world.chunk.Chunk.func_150811_f(Chunk.java:1398)
+	at net.minecraft.world.chunk.Chunk.func_150809_p(Chunk.java:1306)
+	at net.minecraft.world.chunk.Chunk.func_150804_b(Chunk.java:1071)
+	at net.minecraft.world.WorldServer.func_147456_g(WorldServer.java:400)
+	at net.minecraft.world.WorldServer.func_72835_b(WorldServer.java:225)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:756)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at net.minecraft.world.World.func_175642_b(World.java:843)
+	at net.minecraft.world.World.func_175638_a(World.java:2823)
+	at net.minecraft.world.World.func_180500_c(World.java:2860)
+	at net.minecraft.world.World.func_175664_x(World.java:2777)
+	at net.minecraft.world.chunk.Chunk.func_150811_f(Chunk.java:1398)
+	at net.minecraft.world.chunk.Chunk.func_150809_p(Chunk.java:1306)
+	at net.minecraft.world.chunk.Chunk.func_150804_b(Chunk.java:1071)
+	at net.minecraft.world.WorldServer.func_147456_g(WorldServer.java:400)
+	at net.minecraft.world.WorldServer.func_72835_b(WorldServer.java:225)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:756)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Server IO #3" Id=49 RUNNABLE
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@133419dd
+	-  locked java.util.Collections$UnmodifiableSet@1df3e5cb
+	-  locked sun.nio.ch.WindowsSelectorImpl@19cc72ad
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Chunk I/O Executor Thread-1" Id=48 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5cceeff0
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5cceeff0
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"threadDeathWatcher-2-1" Id=42 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at io.netty.util.ThreadDeathWatcher$Watcher.run(ThreadDeathWatcher.java:152)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #2" Id=41 RUNNABLE
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@6f87ff45
+	-  locked java.util.Collections$UnmodifiableSet@6d5892c3
+	-  locked sun.nio.ch.WindowsSelectorImpl@17fbdcdf
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Netty Server IO #1" Id=40 RUNNABLE
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@3ce110bf
+	-  locked java.util.Collections$UnmodifiableSet@6cccbdb1
+	-  locked sun.nio.ch.WindowsSelectorImpl@45abf461
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"File IO Thread" Id=39 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.world.storage.ThreadedFileIOBase.func_75736_b(SourceFile:51)
+	at net.minecraft.world.storage.ThreadedFileIOBase.run(SourceFile:30)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Server Watchdog" Id=38 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:45)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Ender IO Scheduler" Id=37 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at crazypants.enderio.base.scheduler.Scheduler.run(Scheduler.java:41)
+
+
+"Netty Server IO #0" Id=36 RUNNABLE
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@cffd52f
+	-  locked java.util.Collections$UnmodifiableSet@38af48e7
+	-  locked sun.nio.ch.WindowsSelectorImpl@31874b76
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"JLine terminal non blocking reader thread" Id=23 WAITING on org.jline.utils.PumpReader@2b15a9db
+	at java.lang.Object.wait(Native Method)
+	-  waiting on org.jline.utils.PumpReader@2b15a9db
+	at java.lang.Object.wait(Unknown Source)
+	at org.jline.utils.PumpReader.wait(PumpReader.java:66)
+	at org.jline.utils.PumpReader.waitForInput(PumpReader.java:86)
+	at org.jline.utils.PumpReader.read(PumpReader.java:151)
+	at org.jline.utils.NonBlockingReader.run(NonBlockingReader.java:276)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Server console handler" Id=22 TIMED_WAITING on org.jline.utils.NonBlockingReader@5931573b
+	at java.lang.Object.wait(Native Method)
+	-  waiting on org.jline.utils.NonBlockingReader@5931573b
+	at org.jline.utils.NonBlockingReader.read(NonBlockingReader.java:174)
+	at org.jline.utils.NonBlockingReader.read(NonBlockingReader.java:113)
+	at org.jline.keymap.BindingReader.readCharacter(BindingReader.java:132)
+	at org.jline.keymap.BindingReader.readBinding(BindingReader.java:109)
+	at org.jline.keymap.BindingReader.readBinding(BindingReader.java:60)
+	at org.jline.reader.impl.LineReaderImpl.readBinding(LineReaderImpl.java:724)
+	at org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:526)
+	...
+
+
+"DestroyJavaVM" Id=21 RUNNABLE
+
+
+"Server thread" Id=19 RUNNABLE
+	at net.minecraft.world.World.func_175642_b(World.java:843)
+	at net.minecraft.world.World.func_175638_a(World.java:2823)
+	at net.minecraft.world.World.func_180500_c(World.java:2860)
+	at net.minecraft.world.World.func_175664_x(World.java:2777)
+	at net.minecraft.world.chunk.Chunk.func_150811_f(Chunk.java:1398)
+	at net.minecraft.world.chunk.Chunk.func_150809_p(Chunk.java:1306)
+	at net.minecraft.world.chunk.Chunk.func_150804_b(Chunk.java:1071)
+	at net.minecraft.world.WorldServer.func_147456_g(WorldServer.java:400)
+	...
+
+
+"Server Infinisleeper" Id=18 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:82)
+
+
+"Snooper Timer" Id=17 TIMED_WAITING on java.util.TaskQueue@1b1bc48a
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@1b1bc48a
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+
+"WindowsStreamPump" Id=13 RUNNABLE (in native)
+	at com.sun.jna.Native.invokeVoid(Native Method)
+	at com.sun.jna.Function.invoke(Function.java:408)
+	at com.sun.jna.Function.invoke(Function.java:354)
+	at com.sun.jna.Library$Handler.invoke(Library.java:244)
+	at org.jline.terminal.impl.jna.win.$Proxy24.ReadConsoleInput(Unknown Source)
+	at org.jline.terminal.impl.jna.win.JnaWinSysTerminal.readConsoleInput(JnaWinSysTerminal.java:130)
+	at org.jline.terminal.impl.jna.win.JnaWinSysTerminal.processConsoleInput(JnaWinSysTerminal.java:65)
+	at org.jline.terminal.impl.AbstractWindowsTerminal.pump(AbstractWindowsTerminal.java:400)
+	...
+
+
+"Attach Listener" Id=5 RUNNABLE
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@104cf064
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@104cf064
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@1691d8c7
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@1691d8c7
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference.tryHandlePending(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+
+
+Stacktrace:
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:62)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 4317532144 bytes (4117 MB) / 5966921728 bytes (5690 MB) up to 5966921728 bytes (5690 MB)
+	JVM Flags: 2 total; -Xmx6000M -Xms6000M
+	IntCache: cache: 1, tcache: 1, allocated: 0, tallocated: 37
+	FML: MCP 9.42 Powered by Forge 14.23.5.2836 34 mods loaded, 34 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                   | Version           | Source                                                       | Signature                                |
+	|:------ |:-------------------- |:----------------- |:------------------------------------------------------------ |:---------------------------------------- |
+	| LCHIJA | minecraft            | 1.12.2            | minecraft.jar                                                | None                                     |
+	| LCHIJA | mcp                  | 9.42              | minecraft.jar                                                | None                                     |
+	| LCHIJA | FML                  | 8.0.99.99         | forge-1.12.2-14.23.5.2836-universal.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | forge                | 14.23.5.2836      | forge-1.12.2-14.23.5.2836-universal.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | advancedrocketrycore | 1                 | minecraft.jar                                                | None                                     |
+	| LCHIJA | actuallyadditions    | 1.12.2-r146       | ActuallyAdditions-1.12.2-r146.jar                            | None                                     |
+	| LCHIJA | additionalstructures | 1.6.0             | Additional+Structures+1.12.2+by+XxRexRaptorxX++(v.1.6.0).jar | None                                     |
+	| LCHIJA | libvulpes            | 0.4.0.-54         | LibVulpes-1.12.2-0.4.0-54-universal.jar                      | None                                     |
+	| LCHIJA | advancedrocketry     | 1.5.0.-139        | AdvancedRocketry-1.12.2-1.5.0-139-universal.jar              | None                                     |
+	| LCHIJA | animalnet            | 1.7               | animalnet-1.7.jar                                            | None                                     |
+	| LCHIJA | aqueducts            | 0.3               | Aqueducts-0.3.jar                                            | None                                     |
+	| LCHIJA | better_diving        | 1.0.6             | BetterDiving-1.12.2-1.0.6.jar                                | None                                     |
+	| LCHIJA | bonsaitrees          | 1.1.1             | bonsaitrees-1.1.1-b138.jar                                   | None                                     |
+	| LCHIJA | candymod             | 0.4.2             | candyworld-0.4.2.jar                                         | None                                     |
+	| LCHIJA | carbonado            | 1.4.2             | carbonado-1.4.2-mc1.12.x.jar                                 | None                                     |
+	| LCHIJA | desertland           | 0.2.4             | desertland-1.12.2-0.2.4.jar                                  | None                                     |
+	| LCHIJA | endercore            | 1.12.2-0.5.57     | EnderCore-1.12.2-0.5.57.jar                                  | None                                     |
+	| LCHIJA | jei                  | 4.15.0.268        | jei_1.12.2-4.15.0.268.jar                                    | None                                     |
+	| LCHIJA | enderio              | 5.0.43            | EnderIO-base-1.12.2-5.0.43 (1).jar                           | None                                     |
+	| LCHIJA | enderiobase          | 5.0.43            | EnderIO-base-1.12.2-5.0.43 (1).jar                           | None                                     |
+	| LCHIJA | enderioconduits      | 5.0.43            | EnderIO-conduits-1.12.2-5.0.43 (1).jar                       | None                                     |
+	| LCHIJA | enderiopowertools    | 5.0.43            | EnderIO-conduits-1.12.2-5.0.43 (1).jar                       | None                                     |
+	| LCHIJA | enderiomachines      | 5.0.43            | EnderIO-machines-1.12.2-5.0.43 (1).jar                       | None                                     |
+	| LCHIJA | extrautils2          | 1.0               | extrautils2-1.12-1.9.9.jar                                   | None                                     |
+	| LCHIJA | ironchest            | 1.12.2-7.0.40.824 | ironchest-1.12.2-7.0.40.824.jar                              | None                                     |
+	| LCHIJA | jz                   | 1.2               | Jazzium-1.12.2-v1.2.jar                                      | None                                     |
+	| LCHIJA | journeymap           | 1.12.2-5.5.4      | journeymap-1.12.2-5.5.4.jar                                  | None                                     |
+	| LCHIJA | nethergold           | r2                | Nether+Gold-1.12.2-r2.jar                                    | None                                     |
+	| LCHIJA | netherportalfix      | 5.3.17            | NetherPortalFix_1.12.1-5.3.17.jar                            | None                                     |
+	| LCHIJA | signpost             | 1.06.1            | signpost-1.12-1.06.1.jar                                     | None                                     |
+	| LCHIJA | tinymobfarm          | 1.0.5             | TinyMobFarm-1.12.2-1.0.5.jar                                 | None                                     |
+	| LCHIJA | tumbleweed           | 1.11-0.4.4        | tumbleweed-1.11-0.4.4.jar                                    | None                                     |
+	| LCHIJA | twilightforest       | 3.9.888           | twilightforest-1.12.2-3.9.888-universal.jar                  | None                                     |
+	| LCHIJA | of                   | 0.13              | Useful+Interior+-+0.13+[1.12.2].jar                          | None                                     |
+
+	Loaded coremods (and transformers): 
+EnderCorePlugin (EnderCore-1.12.2-0.5.57-core.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+  com.enderio.core.common.transform.SimpleMixinPatcher
+AdvancedRocketryPlugin (AdvancedRocketry-1.12.2-1.5.0-139-universal.jar)
+  zmaster587.advancedRocketry.asm.ClassTransformer
+	Ender IO: No known problems detected.
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!You are looking at the diagnostics information, not at the crash.       !!!
+	!!!Scroll up until you see the line with '---- Minecraft Crash Report ----'!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	Profiler Position: N/A (disabled)
+	Player Count: 3 / 20; [EntityPlayerMP['Zatlr'/375, l='world', x=1879.95, y=31.00, z=-1662.61], EntityPlayerMP['luigigoesboom'/374, l='world', x=1638.96, y=34.00, z=-1724.62], EntityPlayerMP['UnLuckyCharmss'/6369, l='world', x=1201.22, y=34.02, z=-1661.00]]
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
