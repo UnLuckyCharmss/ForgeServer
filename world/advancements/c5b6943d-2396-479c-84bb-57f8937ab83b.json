@@ -919,7 +919,8 @@
       "cave_spider": "2019-04-22 14:09:03 +0100",
       "witch": "2019-04-20 18:45:44 +0100",
       "spider": "2019-04-20 17:48:13 +0100",
-      "creeper": "2019-04-20 17:22:40 +0100"
+      "creeper": "2019-04-20 17:22:40 +0100",
+      "enderman": "2019-04-22 19:32:52 +0100"
     },
     "done": false
   },
@@ -968,6 +969,12 @@
   "minecraft:recipes/decorations/orange_bed": {
     "criteria": {
       "has_orange_wool": "2019-04-22 14:58:50 +0100"
+    },
+    "done": true
+  },
+  "enderiomachines:basics/alloy/2_energetic_alloy_get": {
+    "criteria": {
+      "inv_changed-enderio:item_energetic_alloy": "2019-04-22 19:32:14 +0100"
     },
     "done": true
   },
@@ -1316,6 +1323,12 @@
   "twilightforest:alt/entities/lich": {
     "criteria": {
       "hurt_by_indirect": "2019-04-22 15:17:10 +0100"
+    },
+    "done": true
+  },
+  "twilightforest:alt/treasures/ice_bomb": {
+    "criteria": {
+      "ice_bomb": "2019-04-22 19:47:14 +0100"
     },
     "done": true
   },
